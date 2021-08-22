@@ -8,7 +8,7 @@ namespace XEngine
 	struct WindowProps
 	{
 		// Functions
-		WindowProps(const std::string& title = "X-Engine", uint32_t width = 1280, uint32_t height = 720) : Title(title), Width(width), Height(height) {}
+		WindowProps(const std::string& title = "X-Engine", uint32_t width = 1600, uint32_t height = 900) : Title(title), Width(width), Height(height) {}
 		// Members
 		std::string Title;
 		uint32_t Width;

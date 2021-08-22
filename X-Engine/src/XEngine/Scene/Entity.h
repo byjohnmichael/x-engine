@@ -15,7 +15,9 @@ namespace XEngine
 		Component& AddComponent(Args&&... args)
 		{
 			XCORE_ASSERT(!HasComponent<Component>(), "Entity already has component");
-			return m_Scene->m_Registry.emplace<Component>(m_EntityHandle, std::forward<Args>(args)...);
+			Component& component = m_Scene->m_Registry.emplace<Component>(m_EntityHandle, std::foward<Args>(args)...);
+			m_Scene->OnComponentAdded<Component>(*this, component);
+			return component;
 		}
 		// Get Component
 		template<typename Component>
@@ -37,6 +39,8 @@ namespace XEngine
 			{ return m_Scene->m_Registry.has<Component>(m_EntityHandle); }
 		operator bool() const
 			{ return m_EntityHandle != entt::null; }
+		operator entt::entity() const
+			{ return m_EntityHandle; }
 		operator uint32_t() const
 			{ return (uint32_t)m_EntityHandle; }
 		bool operator==(const Entity& other) const

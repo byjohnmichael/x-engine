@@ -9,11 +9,7 @@
 #include "../../../vendor/ImGui/imgui.h"
 namespace XEngine
 {
-	Scene::Scene()
-	{
-		entt::entity entity = m_Registry.create();
-		m_Registry.emplace<TransformComponent>(entity, glm::vec3(1.0f), glm::vec2(1.0f), 0.0f);
-	}
+	Scene::Scene() {}
 	Scene::~Scene() {}
 	Entity Scene::CreateEntity(const std::string tagName)
 	{
@@ -24,6 +20,8 @@ namespace XEngine
 		tag.Tag = tagName.empty() ? "Entity" : tagName;
 		return entity;
 	}
+	void Scene::DestroyEntity(Entity entity)
+		{ m_Registry.destroy(entity); }
 	void Scene::OnUpdate(Timestep timestep)
 	{
 		// Updating Scripts
@@ -40,7 +38,7 @@ namespace XEngine
 		});
 		// Render 2D
 		Camera* primaryCamera = nullptr;
-		glm::mat4* cameraTransform = nullptr;
+		glm::mat4 cameraTransform;
 		auto view = m_Registry.view<TransformComponent, CameraComponent>();
 		for (auto entity : view)
 		{
@@ -48,21 +46,21 @@ namespace XEngine
 			if (camera.Primary)
 			{
 				primaryCamera = &camera.Camera;
-				cameraTransform = &transform.CalculateMatrix();
+				cameraTransform = transform.GetTransform();
 				break;
 			}
 		}
 		if (primaryCamera)
 		{
-			Renderer2D::BeginScene(primaryCamera->GetProjection(), *cameraTransform);
+			Renderer2D::BeginScene(*primaryCamera, cameraTransform);
 			auto group = m_Registry.group<TransformComponent>(entt::get<SpriteRendererComponent>);
 			for (auto entity : group)
 			{
 				auto& [transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
 				if (sprite.Texture == nullptr)
-					Renderer2D::DrawRotatedQuad(transform.Position, transform.Size, transform.Rotation, sprite.Color);
+					Renderer2D::DrawQuad(transform.GetTransform(), sprite.Color);
 				else
-					Renderer2D::DrawRotatedQuad(transform.Position, transform.Size, transform.Rotation, sprite.Texture, sprite.TillingFactor, sprite.Color);
+					Renderer2D::DrawQuad(transform.GetTransform(), sprite.Texture, sprite.TillingFactor, sprite.Color);
 			}
 			Renderer2D::EndScene();
 		}
@@ -80,4 +78,23 @@ namespace XEngine
 				cameraComponent.Camera.SetViewportSize(width, height);
 		}
 	}
+	template<typename T>
+	void Scene::OnComponentAdded(Entity entity, T& component) 
+		{ static_assert(false); }
+	// Tag
+	template<>
+	void Scene::OnComponentAdded<TagComponent>(Entity entity, TagComponent& component) {}
+	// Transform
+	template<>
+	void Scene::OnComponentAdded<TransformComponent>(Entity entity, TransformComponent& component) {}
+	// Camera
+	template<>
+	void Scene::OnComponentAdded<CameraComponent>(Entity entity, CameraComponent& component)
+		{ component.Camera.SetViewportSize(m_ViewportWidth, m_ViewportHeight); }
+	// Sprite Renderer
+	template<>
+	void Scene::OnComponentAdded<SpriteRendererComponent>(Entity entity, SpriteRendererComponent& component) {}
+	// Native Script Component
+	template<>
+	void Scene::OnComponentAdded<NativeScriptComponent>(Entity entity, NativeScriptComponent& component) {}
 }

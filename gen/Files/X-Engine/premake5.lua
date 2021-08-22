@@ -15,11 +15,13 @@ IncludeDir["ImGui"] = "X-Engine/vendor/ImGui"
 IncludeDir["GLM"]   = "X-Engine/vendor/GLM"
 IncludeDir["stb"]   = "X-Engine/vendor/stb"
 IncludeDir["EnTT"]   = "X-Engine/vendor/EnTT/include"
+IncludeDir["yaml_cpp"]   = "X-Engine/vendor/yaml-cpp/include"
 IncludeDir["Visit_Struct"]   = "X-Engine/vendor/Visit_Struct"
 group "Dependencies"
 	include "X-Engine/vendor/GLFW"
 	include "X-Engine/vendor/GLAD"
 	include "X-Engine/vendor/imgui"
+	include "X-Engine/vendor/yaml-cpp"
 group "Engine"
 	project "X-Engine"
 		location "X-Engine"
@@ -56,6 +58,7 @@ group "Engine"
 			"%{IncludeDir.ImGui}",
 			"%{IncludeDir.GLM}",
 			"%{IncludeDir.stb}",
+			"%{IncludeDir.yaml_cpp}",
 			"%{IncludeDir.Visit_Struct}"
 		}
 		links
@@ -63,6 +66,7 @@ group "Engine"
 			"GLFW",
 			"GLAD",
 			"ImGui",
+			"yaml-cpp",
 			"opengl32.lib"
 		}
 		filter "system:windows"

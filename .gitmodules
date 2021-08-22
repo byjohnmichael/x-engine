@@ -10,3 +10,6 @@
 [submodule "X-Engine/vendor/GLM"]
 	path = X-Engine/vendor/GLM
 	url = https://github.com/g-truc/glm.git
+[submodule "X-Engine/vendor/yaml-cpp"]
+	path = X-Engine/vendor/yaml-cpp
+	url = https://github.com/JohnMichaelProductions/yaml-cpp

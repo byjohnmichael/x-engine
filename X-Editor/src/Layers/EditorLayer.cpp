@@ -3,6 +3,7 @@
 #include <ImGui/imgui.h>
 #include <glm/gtc/type_ptr.hpp>
 #include "Layers/EditorLayer.h"
+#include "XEngine/Scene/Serializer.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include "XEngine/Debug/Instrumentor.h"
 namespace XEngine
@@ -16,24 +17,13 @@ namespace XEngine
 		fbSpec.Width = 1280;
 		fbSpec.Height = 720;
 		m_Framebuffer = Framebuffer::Create(fbSpec);
-		m_PlayerTexture = Texture2D::Create("Assets/Textures/PlayerIdle.png");
-		m_GroundTexture = Texture2D::Create("Assets/Textures/Ground.png");
-		m_BoundsTexture = Texture2D::Create("Assets/Textures/Bounds.png");
-		m_OuterboundsTexture = Texture2D::Create("Assets/Textures/OuterBounds.png");
 		m_ActiveScene = CreateRef<Scene>();
 		m_CameraEntity = m_ActiveScene->CreateEntity("Camera");
 		m_CameraEntity.AddComponent<CameraComponent>();
-		m_Ground = m_ActiveScene->CreateEntity("Ground");
-		m_Ground.AddComponent<SpriteRendererComponent>().Texture = m_GroundTexture;
-		m_Ground.GetComponent<SpriteRendererComponent>().TillingFactor = 10.0f;
-		m_Ground.GetComponent<TransformComponent>().Size = { 10.0f, 10.0f };
 		class Controller : public ScriptableEntity
 		{
 		public:
-			void OnCreate()
-			{
-
-			}
+			void OnCreate() {}
 			void OnDestroy() {}
 			void OnUpdate(Timestep timestep)
 			{
@@ -51,6 +41,8 @@ namespace XEngine
 		};
 		m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<Controller>();
 		m_Hierarchy.SetContext(m_ActiveScene);
+		//Serializer serializer(m_ActiveScene);
+		//serializer.Serialize("Assets/Scenes/Example.XEngine");
 	}
 	void EditorLayer::OnDetach()
 		{ XPROFILE_FUNCTION(); }
@@ -105,11 +97,15 @@ namespace XEngine
 			if (opt_fullscreen)
 				ImGui::PopStyleVar(2);
 			ImGuiIO& io = ImGui::GetIO();
+			ImGuiStyle& style = ImGui::GetStyle();
+			float minWinSizeX = style.WindowMinSize.x;
+			style.WindowMinSize.x = 370.0f;
 			if (io.ConfigFlags & ImGuiConfigFlags_DockingEnable)
 			{
 				ImGuiID dockspace_id = ImGui::GetID("DockSpace");
 				ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
 			}
+			style.WindowMinSize.x = minWinSizeX;
 			if (ImGui::BeginMenuBar())
 			{
 				if (ImGui::BeginMenu("File"))
@@ -146,8 +142,8 @@ namespace XEngine
 			}
 			// Hierarchy
 				{ m_Hierarchy.OnImGuiRender(); }
-			// Inspector
-				{ m_Properties.OnImGuiRender(m_Hierarchy.m_SelectionContext); }
+			// Details
+				{ m_Details.OnImGuiRender(m_Hierarchy.m_SelectionContext); }
 			ImGui::End();
 		}
 	}
