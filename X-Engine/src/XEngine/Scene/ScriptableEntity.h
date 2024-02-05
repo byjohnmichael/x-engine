@@ -8,8 +8,7 @@ namespace XEngine
 		virtual ~ScriptableEntity() {}
 		// Get Component
 		template<typename Component>
-		Component& GetComponent()
-			{ return m_Entity.GetComponent<Component>(); }
+		Component& GetComponent() { return m_Entity.GetComponent<Component>(); }
 	protected:
 		virtual void OnCreate() {}
 		virtual void OnDestroy() {}

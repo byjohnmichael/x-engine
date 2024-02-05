@@ -104,7 +104,7 @@ group "Game"
 			"%{IncludeDir.EnTT}",
 			"X-Engine/src",
 			"X-Engine/vendor",
-			"%{IncludeDir.glm}"
+			"X-Engine/vendor/glm"
 		}
 		links 
 			{ "X-Engine" }

@@ -1,3 +1,4 @@
+# X-Engine git submodules
 [submodule "X-Engine/vendor/ImGui"]
 	path = X-Engine/vendor/ImGui
 	url = https://github.com/ocornut/imgui.git

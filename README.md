@@ -1,5 +1,5 @@
-# X-Engine - Alpha 1.0.0
-Repository for X-Engine. A fast, efficient, easy to use 2D Game Engine. Currently under production and unstable.
+# X-Engine
+Repository for X-Engine, now an archived project. Restarted development as a new project now called [CORAZON](https://GitHub.com/JohnMichaelProductions/CORAZON). 
 
 ## Set-Up
 Current way to set-up X-Engine:
@@ -11,54 +11,7 @@ git clone --recursive https://github.com/JohnMichaelProductions/X-Engine.git
 
 2. Generate: Go to gen/Scripts and run Win10GenerateProject.bat in that directory
 
-3. Run: Run the solution file for your IDE(Visual Studios only supported IDE as of now)
+3. Run: Run the solution file for your IDE(Visual Studios 2019 only supported IDE as of now)
 
-## Features
-
-### Currently Implemented
-
-* Basic but fast 2D Renderer
-* Layer System
-* Input System
-* Loggging
-* Time
-* Orthographic Camera
-* Docking ImGui with viewport
-
-### To be Added
-
-+ Particle System
-+ 2D Lighting
-+ Build System
-+ C# Scripting support
-+ Audio System
-+ More Coming Soon!
-
-## Operating Systems
-
-### Currently Supported
-
-* Windows 10
-
-### To be Supported
-
-+ macOS
-+ Linux
-+ iOS
-+ Android
-
-## Rendering APIs
-
-### Currently Supported
-
-* OpenGL 4.5
-
-### To be Supported
-
-+ OpenGL 3.3
-+ Vulkan 1.2
-+ DirectX 12
-+ DirectX 11
-+ Metal
-
-For questions, concerns, or a bug report email: JohnMBurnside21@gmail.com
+## EOL Release
+There is one release and it is of the progress I made during the development of this engine.

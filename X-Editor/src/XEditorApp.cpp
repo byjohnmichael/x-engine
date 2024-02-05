@@ -12,9 +12,7 @@ namespace XEngine
 			XCORE_INFO("X-Editor starting");
 			PushLayer(new EditorLayer());
 		}
-		~XEditor()
-			{ XCORE_INFO("X-Editor shutting down"); }
+		~XEditor() { XCORE_INFO("X-Editor shutting down"); }
 	};
-	Application* CreateApplication()
-		{ return new XEditor(); }
+	Application* CreateApplication() { return new XEditor(); }
 }

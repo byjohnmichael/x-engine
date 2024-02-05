@@ -6,7 +6,6 @@ bin-int/
 !vendor/bin/premake/
 # File extensions to ignore
 *.log
-*.ini
 *.sln
 *.user
 **.vcxproj
