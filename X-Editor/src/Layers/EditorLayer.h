@@ -31,3 +31,5 @@ namespace XEngine
 			Details m_Details;
 	};
 }
+
+// byjohnmichael

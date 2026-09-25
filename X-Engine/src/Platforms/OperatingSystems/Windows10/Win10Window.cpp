@@ -157,3 +157,5 @@ namespace XEngine
 	bool Win10Window::IsVSync() const
 		{ return m_WindowData.VSync; }
 }
+
+// byjohnmichael

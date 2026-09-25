@@ -15,3 +15,5 @@ namespace XEngine
 		static float GetMouseY();
 	};
 }
+
+// byjohnmichael

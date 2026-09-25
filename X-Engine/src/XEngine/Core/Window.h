@@ -29,3 +29,5 @@ namespace XEngine
 		static Scope<Window> Create(const WindowProps& props = WindowProps());
 	};
 }
+
+// byjohnmichael

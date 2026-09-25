@@ -20,3 +20,5 @@ namespace XEngine
 		static Scope<RendererAPI> m_CommandAPI;
 	};
 }
+
+// byjohnmichael

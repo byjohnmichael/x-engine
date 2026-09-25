@@ -25,3 +25,5 @@ namespace XEngine
 		static Scope<SceneData> m_SceneData;
 	};
 }
+
+// byjohnmichael

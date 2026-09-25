@@ -46,3 +46,5 @@ namespace XEngine
 	};
 	Application* CreateApplication();
 }
+
+// byjohnmichael

@@ -18,3 +18,5 @@ namespace XEngine
 		friend class Scene;
 	};
 }
+
+// byjohnmichael

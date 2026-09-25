@@ -16,3 +16,5 @@ namespace XEngine
 		float m_DeltaTime;
 	};
 }
+
+// byjohnmichael

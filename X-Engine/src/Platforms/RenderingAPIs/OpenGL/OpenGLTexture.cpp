@@ -71,3 +71,5 @@ namespace XEngine
 		glBindTextureUnit(slot, m_RendererID);
 	}
 }
+
+// byjohnmichael

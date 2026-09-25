@@ -39,3 +39,5 @@ namespace XEngine
 		WindowData m_WindowData;
 	};
 }
+
+// byjohnmichael

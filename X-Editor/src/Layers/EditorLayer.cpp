@@ -150,3 +150,5 @@ namespace XEngine
 	void EditorLayer::OnEvent(Event& e)
 		{ m_Camera.OnEvent(e); }
 }
+
+// byjohnmichael

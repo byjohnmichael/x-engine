@@ -25,3 +25,5 @@
 #ifdef XPLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
+
+// byjohnmichael

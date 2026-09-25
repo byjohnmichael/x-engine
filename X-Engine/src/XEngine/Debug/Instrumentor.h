@@ -189,3 +189,5 @@
 	#define XPROFILE_SCOPE(name)
 	#define XPROFILE_FUNCTION()
 #endif
+
+// byjohnmichael

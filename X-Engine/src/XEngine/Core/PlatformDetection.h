@@ -26,3 +26,5 @@
 #else
 	#error "Unknown platform!"
 #endif
+
+// byjohnmichael

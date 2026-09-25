@@ -36,3 +36,5 @@ namespace XEngine
 			m_Layers.erase(it);
 	}
 }
+
+// byjohnmichael

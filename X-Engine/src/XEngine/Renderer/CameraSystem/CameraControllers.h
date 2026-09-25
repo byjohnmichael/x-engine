@@ -33,3 +33,5 @@ namespace XEngine
 		float m_Speed = 1.0f, m_RotationSpeed = 1.0f;
 	};
 }
+
+// byjohnmichael

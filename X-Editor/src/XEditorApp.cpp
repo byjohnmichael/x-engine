@@ -16,3 +16,5 @@ namespace XEngine
 	};
 	Application* CreateApplication() { return new XEditor(); }
 }
+
+// byjohnmichael

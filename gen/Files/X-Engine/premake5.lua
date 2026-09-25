@@ -167,3 +167,5 @@ group "Editor"
 			optimize "on"
 			staticruntime "on"
 			runtime "Release"
+
+-- byjohnmichael

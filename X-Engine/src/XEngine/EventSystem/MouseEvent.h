@@ -77,3 +77,5 @@ namespace XEngine
 		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 }
+
+// byjohnmichael

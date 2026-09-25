@@ -21,3 +21,5 @@ namespace XEngine
 		Ref<Scene> m_Context;
 	};
 }
+
+// byjohnmichael

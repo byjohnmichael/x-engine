@@ -52,3 +52,5 @@ namespace XEngine
 		Scene* m_Scene = nullptr;
 	};
 }
+
+// byjohnmichael

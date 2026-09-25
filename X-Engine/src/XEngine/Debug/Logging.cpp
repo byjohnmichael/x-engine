@@ -30,3 +30,5 @@ namespace XEngine
 		m_ClientLogger->flush_on(spdlog::level::trace);
 	}
 }
+
+// byjohnmichael
