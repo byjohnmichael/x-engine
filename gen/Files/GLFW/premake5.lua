@@ -59,3 +59,5 @@ project "GLFW"
 	filter "configurations:Release"
 		optimize "on"
 		runtime "Release"
+
+-- byjohnmichael

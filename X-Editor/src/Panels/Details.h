@@ -11,3 +11,5 @@ namespace XEngine
 		void OnImGuiRender(Entity& m_SelectionContext);
 	};
 }
+
+// byjohnmichael

@@ -70,3 +70,5 @@ void main()
 	}
 	color = texColor;
 }
+
+// byjohnmichael

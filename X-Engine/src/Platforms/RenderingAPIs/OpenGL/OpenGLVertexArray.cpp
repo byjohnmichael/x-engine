@@ -92,3 +92,5 @@ namespace XEngine
 		m_IndexBuffer = indexBuffer;
 	}
 }
+
+// byjohnmichael

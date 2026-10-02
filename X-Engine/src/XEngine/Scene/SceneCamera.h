@@ -78,3 +78,5 @@ namespace XEngine
 		ProjectionType m_ProjectionType = ProjectionType::Orthographic;
 	};
 }
+
+// byjohnmichael

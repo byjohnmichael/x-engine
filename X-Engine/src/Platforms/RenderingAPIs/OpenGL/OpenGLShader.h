@@ -40,3 +40,5 @@ namespace XEngine
 		uint32_t m_RendererID;
 	};
 }
+
+// byjohnmichael

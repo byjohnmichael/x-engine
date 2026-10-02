@@ -28,3 +28,5 @@ namespace XEngine
 		RenderCommand::DrawIndexed(vertexArray);
 	}
 }
+
+// byjohnmichael

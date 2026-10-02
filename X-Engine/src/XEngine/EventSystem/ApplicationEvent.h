@@ -51,3 +51,5 @@ namespace XEngine
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 }
+
+// byjohnmichael

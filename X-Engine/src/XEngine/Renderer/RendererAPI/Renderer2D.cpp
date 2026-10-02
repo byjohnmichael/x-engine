@@ -245,3 +245,5 @@ namespace XEngine
 	void Renderer2D::ResetStats()
 		{ memset(&m_RendererData.RendererStats, 0, sizeof(Stats)); }
 }
+
+// byjohnmichael

@@ -34,3 +34,5 @@ namespace XEngine
 		uint32_t m_Count;
 	};
 }
+
+// byjohnmichael

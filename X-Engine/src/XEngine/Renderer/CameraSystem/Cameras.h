@@ -49,3 +49,5 @@ namespace XEngine
 		float m_Rotation = 0.0f;
 	};
 }
+
+// byjohnmichael

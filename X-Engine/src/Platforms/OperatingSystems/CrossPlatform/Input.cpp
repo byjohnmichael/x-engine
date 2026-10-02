@@ -29,3 +29,5 @@ namespace XEngine
 	float Input::GetMouseY()
 		{ return GetMousePosition().y; }
 }
+
+// byjohnmichael

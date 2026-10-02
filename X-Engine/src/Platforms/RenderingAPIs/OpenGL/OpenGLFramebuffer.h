@@ -22,3 +22,5 @@ namespace XEngine
 		FramebufferSpecificaion m_Spec;
 	};
 }
+
+// byjohnmichael

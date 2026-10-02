@@ -23,3 +23,5 @@ namespace XEngine
 		std::string m_DebugName;
 	};
 }
+
+// byjohnmichael

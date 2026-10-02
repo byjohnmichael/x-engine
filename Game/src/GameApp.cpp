@@ -8,3 +8,5 @@ public:
 	~Game() { XCORE_INFO("Game shutting down"); }
 };
 XEngine::Application* XEngine::CreateApplication() { return new Game(); }
+
+// byjohnmichael

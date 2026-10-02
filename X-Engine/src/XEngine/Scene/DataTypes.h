@@ -31,3 +31,5 @@ namespace XEngine
 		operator glm::vec4() const
 			{ return glm::vec4{ X, Y, Z, W }; }	};
 }
+
+// byjohnmichael

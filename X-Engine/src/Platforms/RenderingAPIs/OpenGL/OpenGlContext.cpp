@@ -26,3 +26,5 @@ namespace XEngine
 		glfwSwapBuffers(m_WindowHandle);
 	}
 }
+
+// byjohnmichael

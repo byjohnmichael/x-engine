@@ -60,3 +60,5 @@ namespace XEngine
 	bool ShaderLibrary::Exists(const std::string& name) const
 		{ return m_Shaders.find(name) != m_Shaders.end(); }
 }
+
+// byjohnmichael

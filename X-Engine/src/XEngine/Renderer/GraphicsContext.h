@@ -11,3 +11,5 @@ namespace XEngine
 		static Scope<GraphicsContext> Create(void* window);
 	};
 }
+
+// byjohnmichael

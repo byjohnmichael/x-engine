@@ -14,3 +14,5 @@ namespace XEngine
 		GLFWwindow* m_WindowHandle;
 	};
 }
+
+// byjohnmichael

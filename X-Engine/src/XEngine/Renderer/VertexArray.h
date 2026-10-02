@@ -17,3 +17,5 @@ namespace XEngine
 		static Ref<VertexArray> Create();
 	};
 }
+
+// byjohnmichael

@@ -55,3 +55,5 @@ namespace XEngine
 		EVENT_CLASS_TYPE(KeyTyped)
 	};
 }
+
+// byjohnmichael

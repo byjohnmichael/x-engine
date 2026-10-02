@@ -55,3 +55,5 @@ namespace XEngine
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	}
 }
+
+// byjohnmichael

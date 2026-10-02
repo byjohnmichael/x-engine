@@ -28,3 +28,5 @@ namespace XEngine
 		GLenum m_DataFormat;
 	};
 }
+
+// byjohnmichael

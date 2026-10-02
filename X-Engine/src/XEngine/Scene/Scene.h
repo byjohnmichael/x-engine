@@ -27,3 +27,5 @@ namespace XEngine
 		//friend class Serializer;
 	};
 }
+
+// byjohnmichael

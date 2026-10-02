@@ -44,3 +44,5 @@ namespace XEngine
 		static void FlushAndReset();
 	};
 }
+
+// byjohnmichael

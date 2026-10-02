@@ -42,3 +42,5 @@ namespace XEngine
 	#define XCLIENT_ERROR(...)
 	#define XCLIENT_CRITICAL(...)
 #endif
+
+// byjohnmichael
